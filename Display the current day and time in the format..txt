@@ -1,0 +1,23 @@
+// create a new Date object to get the current date and time
+const now = new Date();
+
+// create an array of the days of the week
+const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+// get the current day of the week
+const dayOfWeek = daysOfWeek[now.getDay()];
+
+// get the current time
+const hours = now.getHours();
+const minutes = now.getMinutes();
+const seconds = now.getSeconds();
+const ampm = hours >= 12 ? 'PM' : 'AM';
+
+// convert to 12-hour format
+const hours12 = hours % 12 || 12;
+
+// create the message to display
+const message = `Today is ${dayOfWeek}. Current time is ${hours12}:${minutes}:${seconds} ${ampm}.`;
+
+// print the message to the console
+console.log(message);
